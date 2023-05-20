@@ -45,6 +45,7 @@ notesHeading.addEventListener("click", () => {
   archiveHeading.classList.remove("active-link");
   trashHeading.classList.remove("active-link");
   createNoteCard.style.display = "flex";
+  showNotesDiv.style.display = "flex";
   archivesAppearHere.style.display = "none";
   trashedAppearHere.style.display = "none";
 });
@@ -56,6 +57,7 @@ archiveHeading.addEventListener("click", () => {
   createNoteCard.style.display = "none";
   archivesAppearHere.style.display = "flex";
   trashedAppearHere.style.display = "none";
+  showNotesDiv.style.display = "none";
 });
 
 trashHeading.addEventListener("click", () => {
@@ -65,6 +67,7 @@ trashHeading.addEventListener("click", () => {
   createNoteCard.style.display = "none";
   archivesAppearHere.style.display = "none";
   trashedAppearHere.style.display = "flex";
+  showNotesDiv.style.display = "none";
 });
 // Sidebar heading bgcolor styling ends here
 
