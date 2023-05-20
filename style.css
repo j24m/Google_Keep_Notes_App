@@ -190,6 +190,24 @@
   background-color: var(--nav-logo-heading-color);
 }
 
+/* Archive and trash appear here styling */
+.archive-trash-appears-here {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.archive-trash-appears-here svg {
+  color: var(--searchbar-bg-color);
+}
+
+.archive-trash-appears-here h1 {
+  font-size: 2.5rem;
+  color: var(--gray-shade-color2);
+}
+
 /* Toast */
 .showToastDiv {
   position: absolute;

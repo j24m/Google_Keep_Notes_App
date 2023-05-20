@@ -2,6 +2,9 @@ let searchBarContainer = document.querySelector(".searchbar-container");
 let notesHeading = document.querySelector("#notesHeading");
 let archiveHeading = document.querySelector("#archiveHeading");
 let trashHeading = document.querySelector("#trashHeading");
+let archivesAppearHere = document.querySelector(".archives-appear-here");
+let trashedAppearHere = document.querySelector(".trashed-appear-here");
+let createNoteCard = document.querySelector(".create-note");
 let addTitle = document.querySelector("#title");
 let addNote = document.querySelector("#add-note");
 let addNoteBtn = document.querySelector(".btn-add-note");
@@ -33,24 +36,35 @@ function outsideClick(e) {
 }
 // Search bar styling ends here
 
+archivesAppearHere.style.display = "none";
+trashedAppearHere.style.display = "none";
 // Sidebar heading bgcolor styling starts here
 notesHeading.classList.add("active-link");
 notesHeading.addEventListener("click", () => {
   notesHeading.classList.add("active-link");
   archiveHeading.classList.remove("active-link");
   trashHeading.classList.remove("active-link");
+  createNoteCard.style.display = "flex";
+  archivesAppearHere.style.display = "none";
+  trashedAppearHere.style.display = "none";
 });
 
 archiveHeading.addEventListener("click", () => {
   notesHeading.classList.remove("active-link");
   archiveHeading.classList.add("active-link");
   trashHeading.classList.remove("active-link");
+  createNoteCard.style.display = "none";
+  archivesAppearHere.style.display = "flex";
+  trashedAppearHere.style.display = "none";
 });
 
 trashHeading.addEventListener("click", () => {
   notesHeading.classList.remove("active-link");
   archiveHeading.classList.remove("active-link");
   trashHeading.classList.add("active-link");
+  createNoteCard.style.display = "none";
+  archivesAppearHere.style.display = "none";
+  trashedAppearHere.style.display = "flex";
 });
 // Sidebar heading bgcolor styling ends here
 
