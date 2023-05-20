@@ -91,6 +91,8 @@ function saveNote() {
     console.log(allNotes);
     renderAllnotes();
   }
+  addTitle.value = "";
+  addNote.value = "";
 }
 
 closeToastBtn.addEventListener("click", () => {
