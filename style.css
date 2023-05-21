@@ -134,11 +134,12 @@
   padding: 1rem;
   align-items: center;
   gap: 4rem;
+  margin-top: 1rem;
 }
 
 /* Create note */
 .create-note {
-  margin: 4rem;
+  margin: 3rem;
   display: flex;
   flex-direction: column;
   width: 60rem;
@@ -165,9 +166,22 @@
 
 .create-note .operation-icons > button,
 .noteCard .operation-icons > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: static;
   margin-left: 1rem;
   margin-top: 1rem;
+}
+
+.create-note .operation-icons > button > .add-icon,
+.create-note .operation-icons > button > .archive-icon,
+.noteCard .operation-icons > button > .archive-icon,
+.create-note .operation-icons > button > .trash-icon,
+.noteCard .operation-icons > button > .trash-icon {
+  height: 2.2rem;
+  width: 2.2rem;
+  pointer-events: none;
 }
 
 .create-note input:focus,
@@ -250,7 +264,8 @@
 }
 
 /* Note Card */
-.showNotesDiv {
+.showNotesDiv,
+.archivedNotesDiv {
   display: flex;
   justify-content: center;
   align-items: center;
