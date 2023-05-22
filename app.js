@@ -95,14 +95,14 @@ showToastDiv.style.display = "none";
 addNoteBtn.addEventListener("click", saveNote);
 function saveNote() {
   const allNotesObj = {
-    providedTitle: addTitle.value,
-    providedNote: addNote.value,
+    providedTitle: addTitle.value.trim(),
+    providedNote: addNote.value.trim(),
   };
 
-  if (addTitle.value === "") {
+  if (allNotesObj.providedTitle === "") {
     toastMessage.innerHTML = "Please add a Title";
     showToastDiv.style.display = "block";
-  } else if (addNote.value === "") {
+  } else if (allNotesObj.providedNote === "") {
     toastMessage.innerHTML = "Please add a Note";
     showToastDiv.style.display = "block";
   } else {
