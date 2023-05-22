@@ -265,12 +265,14 @@
 
 /* Note Card */
 .showNotesDiv,
-.archivedNotesDiv {
+.archivedNotesDiv,
+.trashedNotesDiv {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   flex-wrap: wrap;
   gap: 2rem;
+  width: 100%;
 }
 
 .noteCard {
