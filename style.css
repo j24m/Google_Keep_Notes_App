@@ -178,7 +178,13 @@
 .create-note .operation-icons > button > .archive-icon,
 .noteCard .operation-icons > button > .archive-icon,
 .create-note .operation-icons > button > .trash-icon,
-.noteCard .operation-icons > button > .trash-icon {
+.noteCard .operation-icons > button > .trash-icon,
+.create-note .operation-icons > button > .unarchive-icon,
+.noteCard .operation-icons > button > .unarchive-icon,
+.noteCard .operation-icons > button > .restore-from-trash-icon,
+.create-note .operation-icons > button > .restore-from-trash-icon,
+.noteCard .operation-icons > button > .delete-forever-icon,
+.create-note .operation-icons > button > .delete-forever-icon {
   height: 2.2rem;
   width: 2.2rem;
   pointer-events: none;

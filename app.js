@@ -1,4 +1,5 @@
 let searchBarContainer = document.querySelector(".searchbar-container");
+let searchbarInput = document.querySelector("#searchbar-input");
 let notesHeading = document.querySelector("#notesHeading");
 let archiveHeading = document.querySelector("#archiveHeading");
 let trashHeading = document.querySelector("#trashHeading");
@@ -107,7 +108,6 @@ function saveNote() {
     showToastDiv.style.display = "block";
   } else {
     allNotes.push(allNotesObj);
-    console.log(allNotes);
     renderAllnotes();
     addTitle.value = "";
     addNote.value = "";
@@ -216,6 +216,13 @@ function renderArchivedNotes() {
         }</h1>
         <p class="addedText">${note.querySelector(".addedText").textContent}</p>
         <div class="operation-icons">
+
+        <button class="btn btn-primary btn-floating btn-trash-note">
+        <span class="unarchive-icon">  
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM6.24 5h11.52l.83 1H5.42l.82-1zM5 19V8h14v11H5zm3-5h2.55v3h2.9v-3H16l-4-4z"/></svg>
+      </span>
+    </button>
+
         <button class="btn btn-primary btn-floating btn-trash-note">
         <span class="trash-icon">  
         <svg
@@ -232,6 +239,7 @@ function renderArchivedNotes() {
       </svg>
       </span>
     </button>
+    
     </div>
       </div>
     `;
@@ -251,19 +259,13 @@ function renderTrashedNotes() {
         <p class="addedText">${note.querySelector(".addedText").textContent}</p>
         <div class="operation-icons">
         <button class="btn btn-primary btn-floating btn-trash-note">
-        <span class="trash-icon">  
-        <svg
-      class="svg-trash-note"
-        xmlns="http://www.w3.org/2000/svg"
-        width="22"
-        height="22"
-        viewBox="0 0 24 24"
-      >
-        <path
-          fill="currentColor"
-          d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7ZM17 6H7v13h10V6ZM9 17h2V8H9v9Zm4 0h2V8h-2v9ZM7 6v13V6Z"
-        />
-      </svg>
+        <span class="restore-from-trash-icon">  
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14zM6 7v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm8 7v4h-4v-4H8l4-4l4 4h-2z"/></svg>
+      </span>
+    </button>
+        <button class="btn btn-primary btn-floating btn-trash-note">
+        <span class="delete-forever-icon">  
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12l1.41 1.41L13.41 14l2.12 2.12l-1.41 1.41L12 15.41l-2.12 2.12l-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/></svg>
       </span>
     </button>
     </div>
@@ -272,3 +274,9 @@ function renderTrashedNotes() {
   }
   trashedNotesDiv.innerHTML = trashedNotesHTML;
 }
+
+// Search note by title
+// function searchFunc() {
+//   const searchValue = searchbarInput.value.toLowerCase();
+//   let titles = allNotes.map((obj) => obj.providedTitle.toLowerCase());
+// }
